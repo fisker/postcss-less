@@ -1,13 +1,12 @@
-const { readFileSync } = require('fs');
+import test from 'ava';
+import postcss from 'postcss';
+import {readFileSync} from 'node:fs';
+import {join} from 'node:path';
 
-const { join } = require('path');
-
-const test = require('ava');
-const postcss = require('postcss');
-
-const syntax = require('../lib');
+import syntax from '../lib/index.js';
 
 const { parser } = syntax;
+const __dirname = import.meta.dirname;
 
 // silence the rediculously verbose "You did not set any plugins, parser, or
 // stringifier" warnings in PostCSS.

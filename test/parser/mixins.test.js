@@ -1,6 +1,8 @@
-const test = require('ava');
+import test from 'ava';
 
-const { parse, nodeToString } = require('../../lib');
+import syntax from '../../lib/index.js';
+
+const { parse, nodeToString } = syntax;
 
 test('basic', (t) => {
   const params = '(  1, 2, 3; something, else; ...) when (@mode=huge)';

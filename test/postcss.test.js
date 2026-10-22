@@ -1,8 +1,9 @@
-const test = require('ava');
-const postcss = require('postcss');
-const CssSyntaxError = require('postcss/lib/css-syntax-error');
+import test from 'ava';
+import postcss from 'postcss';
+import CssSyntaxError from 'postcss/lib/css-syntax-error';
 
-const syntax = require('../lib');
+import syntax from '../lib/index.js';
+
 
 const { parser } = syntax;
 
