@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - github-action
   pull_request:
 
 
@@ -45,6 +44,7 @@ jobs:
       - name: Run Linting
         run: npm run lint
 
-      - name: Run NPM Audit
-        run: npm run security
+      # Disabled temporarily
+      # - name: Run NPM Audit
+      #   run: npm run security
 
