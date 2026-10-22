@@ -1,7 +1,9 @@
-const test = require('ava');
-const { eachTest, jsonify } = require('postcss-parser-tests');
+import test from 'ava';
+import { eachTest, jsonify } from 'postcss-parser-tests';
 
-const { nodeToString, parse, stringify } = require('../../lib');
+import syntax from '../../lib/index.js';
+
+const { nodeToString, parse, stringify } = syntax;
 
 eachTest((name, code, json) => {
   // Skip comments.css, because we have an extended Comment node

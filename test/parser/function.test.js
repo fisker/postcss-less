@@ -1,6 +1,8 @@
-const test = require('ava');
+import test from 'ava';
 
-const { parse, nodeToString } = require('../../lib');
+import syntax from '../../lib/index.js';
+
+const { parse, nodeToString } = syntax;
 
 test('each (#121)', (t) => {
   const params = `(@colors, {
