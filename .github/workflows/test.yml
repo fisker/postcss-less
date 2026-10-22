@@ -1,0 +1,50 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - master
+      - github-action
+  pull_request:
+
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        node_version:
+          - ""
+          - "12"
+    name: Node.js ${{ matrix.node_version }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: NPM Rebuild
+        run: npm install
+
+      - name: Run unit tests
+        run: npm run ci:coverage
+
+      - name: Submit coverage data to codecov.
+        run: bash <(curl -s https://codecov.io/bash)
+
+  analysis:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: NPM Rebuild
+        run: npm install
+
+      - name: Run Linting
+        run: npm run lint
+
+      - name: Run NPM Audit
+        run: npm run security
+
