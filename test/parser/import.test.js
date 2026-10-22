@@ -1,7 +1,9 @@
-const test = require('ava');
-const AtRule = require('postcss/lib/at-rule');
+import test from 'ava';
+import AtRule from 'postcss/lib/at-rule';
 
-const { parse, nodeToString } = require('../../lib');
+import syntax from '../../lib/index.js';
+
+const { parse, nodeToString } = syntax;
 
 test('@at-rules != @imports', async (t) => {
   const less = '@const "foo.less";';
