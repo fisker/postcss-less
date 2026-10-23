@@ -1,7 +1,7 @@
 [tests]: 	https://img.shields.io/circleci/project/github/shellscape/postcss-less.svg
 [tests-url]: https://circleci.com/gh/shellscape/postcss-less
 
-[cover]: https://codecov.io/gh/shellscape/postcss-less/branch/master/graph/badge.svg
+[cover]: https://codecov.io/gh/shellscape/postcss-less/branch/main/graph/badge.svg
 [cover-url]: https://codecov.io/gh/shellscape/postcss-less
 
 [size]: https://packagephobia.now.sh/badge?p=postcss-less
