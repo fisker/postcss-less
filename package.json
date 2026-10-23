@@ -60,7 +60,8 @@
     "files": [
       "!**/fixtures/**",
       "!**/helpers/**"
-    ]
+    ],
+    "verbose": true
   },
   "lint-staged": {
     "*.js": [
