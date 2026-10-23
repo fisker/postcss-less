@@ -16,9 +16,9 @@ console.warn = () => {}; // eslint-disable-line no-console
 test('should parse LESS integration syntax and generate a source map', async (t) => {
   const less = readFileSync(join(__dirname, './integration/ext.cx.dashboard.less'), 'utf-8');
   const result = await postcss().process(less, {
-    syntax,
+    map: { annotation: false, inline: false, sourcesContent: true },
     parser,
-    map: { inline: false, annotation: false, sourcesContent: true }
+    syntax
   });
 
   t.truthy(result);
@@ -34,9 +34,9 @@ test('should parse LESS inline comment syntax and generate a source map', async 
   }
   `;
   const result = await postcss().process(less, {
-    syntax,
+    map: { annotation: false, inline: false, sourcesContent: true },
     parser,
-    map: { inline: false, annotation: false, sourcesContent: true }
+    syntax
   });
 
   t.truthy(result);

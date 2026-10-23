@@ -12,7 +12,7 @@ console.warn = () => {}; // eslint-disable-line no-console
 
 test('should process LESS syntax', async (t) => {
   const less = 'a { b {} }';
-  const result = await postcss().process(less, { syntax, parser });
+  const result = await postcss().process(less, { parser, syntax });
 
   t.truthy(result);
   t.is(result.css, less);
