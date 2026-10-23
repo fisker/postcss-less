@@ -39,9 +39,9 @@ for (const site of sites) {
       const css = await req.text();
 
       await postcss().process(css, {
-        parser: syntax.parse,
+        from: null,
         map: { annotation: false },
-        from: null
+        parser: syntax.parse
       });
     }
 
