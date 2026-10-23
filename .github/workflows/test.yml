@@ -22,10 +22,10 @@ jobs:
         uses: actions/checkout@v7
 
       - name: NPM Rebuild
-        run: npm install
+        run: yarn
 
       - name: Run unit tests
-        run: npm run ci:coverage
+        run: yarn ci:coverage
 
       - name: Submit coverage data to codecov.
         run: bash <(curl -s https://codecov.io/bash)
@@ -39,12 +39,8 @@ jobs:
         uses: actions/checkout@v7
 
       - name: NPM Rebuild
-        run: npm install
+        run: yarn
 
       - name: Run Linting
-        run: npm run lint
-
-      # Disabled temporarily
-      # - name: Run NPM Audit
-      #   run: npm run security
+        run: yarn lint
 

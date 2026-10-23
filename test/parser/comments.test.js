@@ -1,7 +1,9 @@
-const test = require('ava');
-const Comment = require('postcss/lib/comment');
+import test from 'ava';
+import Comment from 'postcss/lib/comment';
 
-const { parse, nodeToString } = require('../../lib');
+import syntax from '../../lib/index.js';
+
+const { parse, nodeToString } = syntax;
 
 test('inline comment', (t) => {
   const less = '// batman';

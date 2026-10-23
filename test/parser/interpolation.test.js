@@ -1,8 +1,10 @@
 /* eslint no-useless-escape: off */
 
-const test = require('ava');
+import test from 'ava';
 
-const { parse } = require('../../lib');
+import syntax from '../../lib/index.js';
+
+const { parse } = syntax;
 
 test('parses interpolation', (t) => {
   const root = parse('@{selector}:hover { @{prop}-size: @{color} }');

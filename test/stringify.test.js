@@ -1,6 +1,6 @@
-const test = require('ava');
+import test from 'ava';
 
-const syntax = require('../lib');
+import syntax from '../lib/index.js';
 
 const { parse, nodeToString } = syntax;
 
