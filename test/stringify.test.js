@@ -2,7 +2,6 @@ import test from 'ava';
 
 import syntax from '../lib/index.js';
 
-
 const { parse, nodeToString } = syntax;
 
 const run = (less) => {

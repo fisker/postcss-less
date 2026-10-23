@@ -1,10 +1,12 @@
-import {createRequire} from 'node:module';
+import { createRequire } from 'node:module';
+
 import test from 'ava';
 
 import syntax from '../../lib/index.js';
 
-const require = createRequire(import.meta.url)
+const require = createRequire(import.meta.url);
 const { eachTest, jsonify } = require('postcss-parser-tests');
+
 const { nodeToString, parse, stringify } = syntax;
 
 eachTest((name, code, json) => {

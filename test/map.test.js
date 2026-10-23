@@ -1,7 +1,9 @@
+import { readFileSync } from 'node:fs';
+
+import { join } from 'node:path';
+
 import test from 'ava';
 import postcss from 'postcss';
-import {readFileSync} from 'node:fs';
-import {join} from 'node:path';
 
 import syntax from '../lib/index.js';
 
